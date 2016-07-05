@@ -79,40 +79,42 @@
     <![endif]-->
     <!-- <div class="parallax-container parallax-full-height" data-parallax="scroll" data-position="-150px bottom" data-bleed="0" data-image-src="img/2BIS.jpg" data-natural-width="2160" data-natural-height="1080" style="background-image: url(img/2BIS.jpg); background-position: center bottom;"> -->
     <div class="parallax-container parallax-full-height" data-parallax="scroll" data-position="-150px bottom" data-bleed="0" data-image-src="img/home.jpg" data-natural-width="2048" data-natural-height="1024" style="background-image: url(img/home.jpg); background-position: center bottom;">
-        <nav id="navbar-main" class="navbar navbar-inverse" role="navigation">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="/">Les Cordes associées</a>
-                    <a id="brand-text" class="navbar-brand visible-md-inline" href="/">Les Cordes associées</a>
-                </div>
-                <div id="navbar" class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav">
-                        <li><a href="#la-compagnie">La compagnie</a></li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Les spectacles <span class="caret"></span></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="#laccordheure">L'accord'heure</a></li>
-                                <li><a href="#echassetoidela">Echasse toi de là</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="le-marentin.html" title="Festival jeune public">Le Marentin</a></li>
-                        <li class="dropdown open hidden"><ul class="dropdown-menu"></ul></li>
-                    </ul>
-                    <div class="navbar-right">
+        <div id="navbar-container">
+            <nav id="navbar-main" class="navbar navbar-inverse" role="navigation" data-spy="affix" data-offset-top="75">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="/">Les Cordes associées</a>
+                        <a id="brand-text" class="navbar-brand visible-md-inline" href="/">Les Cordes associées</a>
+                    </div>
+                    <div id="navbar" class="navbar-collapse collapse">
                         <ul class="nav navbar-nav">
-                            <li><a href="#contact" title="Nous contacter"><i class="fa fa-envelope fa-lg"></i><span class="sr-only">Nous contacter</span></a></li>
-                            <li><a href="https://www.facebook.com/Les-Cordes-associ%C3%A9es-Cie-1391818084473973/timeline/" title="Notre Facebook"><i class="fa fa-facebook-official fa-lg"></i><span class="sr-only">Notre Facebook</span></a></li>
+                            <li><a href="#la-compagnie">La compagnie</a></li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Les spectacles <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#laccordheure">L'accord'heure</a></li>
+                                    <li><a href="#echassetoidela">Echasse toi de là</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="le-marentin.html" title="Festival jeune public">Le Marentin</a></li>
+                            <li class="dropdown open hidden"><ul class="dropdown-menu"></ul></li>
                         </ul>
+                        <div class="navbar-right">
+                            <ul class="nav navbar-nav">
+                                <li><a href="#contact" title="Nous contacter"><i class="fa fa-envelope fa-lg"></i><span class="sr-only">Nous contacter</span></a></li>
+                                <li><a href="https://www.facebook.com/Les-Cordes-associ%C3%A9es-Cie-1391818084473973/timeline/" title="Notre Facebook"><i class="fa fa-facebook-official fa-lg"></i><span class="sr-only">Notre Facebook</span></a></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </nav>
+            </nav>
+        </div>
 
         <div class="container text-right">
             <h1><span class="bg-primary">Les Cordes Associées</span></h1>
@@ -249,20 +251,26 @@ Alors « Echasses toi de là »…!</span></p>
     <!--script src="js/main.js"></script-->
     <script type="text/javascript">
 ;$(function() {
+    var goToHash = function( target ) {
+        target = $(target);
+        if (target.length) {
+            $('html,body').animate({
+                scrollTop: target.offset().top - 51
+            }, 1000);
+        }
+    };
+
     $('.parallax-container').css('background','none');
 
-    $('a[href*=#]:not([href=#])').click(function() {
+    $('a[href*=#]:not([href=#])').on("click", function() {
         if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-            var target = $(this.hash);
-            target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-            if (target.length) {
-            $('html,body').animate({
-            scrollTop: target.offset().top
-            }, 1000);
+            goToHash( this.hash );
             return false;
-            }
         }
     });
+    if ( self.document.location.hash ) {
+        goToHash( self.document.location.hash );
+    }
 
     $(".antispamEmail").on("click", function() {
         var $t = $(this);
