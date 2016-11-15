@@ -1,0 +1,36 @@
+<div id="navbar-container">
+    <nav id="navbar-main" class="navbar navbar-inverse" role="navigation" data-spy="affix" data-offset-top="75">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="{{site.baseurl}}/"><img class="navbar-logo" src="{{site.baseurl}}/img/les_cordes_associees_cie.200.jpg" /><span class="sr-only">Les Cordes associées</span></a>
+                <a id="brand-text" class="navbar-brand visible-md-inline" href="{{site.baseurl}}/">Les Cordes associées</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="{{site.baseurl}}/index.html#la-compagnie">La compagnie</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Les spectacles <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="{{site.baseurl}}/index.html#laccordheure">L'accord'heure</a></li>
+                            <li><a href="{{site.baseurl}}/index.html#echassetoidela">Echasse toi de là</a></li>
+                        </ul>
+                    </li>
+                    <li{%if include.active=="le-marentin"%} class="active"{%endif%}><a href="{{site.baseurl}}/le-marentin.html" title="Festival jeune public">Le Marentin</a></li>
+                    <li class="dropdown open hidden"><ul class="dropdown-menu"></ul></li>
+                </ul>
+                <div class="navbar-right">
+                    <ul class="nav navbar-nav">
+                        <li><a href="mailto:" class="antispamEmail" title="Notre courriel" data-to="lescordesassociees~at~gmail.com" data-subject="[Message du site web] "><span class="fa fa-envelope fa-lg"></span><span class="sr-only"> Contactez nous</span></a></li>
+                        <li><a href="https://www.facebook.com/lescordesassociees/?ref=page_internal"><span class="fa fa-facebook-official fa-lg"></span><span class="sr-only"> Notre Facebook</span></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+</div>

@@ -1,16 +1,15 @@
+_less
+_site
+.sass-cache
+.jekyll-metadata
+Gemfile
+Gemfile.lock
+.DS_Store
 
 android-chrome*
-
 apple-touch-icon*
-
-contact.php
-
 favicon*
-
 img/le-marentin.*
-
 img/les_cordes_associees_cie*
-
 mstile*
-
 img/le-marentin-annonceur.jpeg

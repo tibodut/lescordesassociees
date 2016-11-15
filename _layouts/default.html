@@ -1,0 +1,120 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="fr"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang="fr"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang="fr"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="fr"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>{{site.title}}</title>
+    <meta name="description" content="{{site.description}}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    {% include favicons.html %}
+
+    {% include metaheader.html %}
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/bootstrap-superhero.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <!--link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"-->
+    <link href="http://vjs.zencdn.net/5.8.8/video-js.css" rel="stylesheet">
+    <!-- link rel="stylesheet" href="css/main.css" -->
+    <style type="text/css">
+a:focus, a:hover {
+    color: #ee8dff;
+}
+.dropdown-menu>li>a { font-weight: 100; }
+.parallax-container {
+    padding-top:1px;
+    padding-bottom:1px;
+}
+.parallax-container h1 { line-height: 1.3; }
+.parallax-container span.bg-default { background-color: rgba(34,34,34,.6); }
+.parallax-container span.bg-primary { background-color: rgba(130, 33, 147, 0.5); }
+.padding-top { padding-top: 15px; }
+.padding-bottom { padding-bottom: 15px; }
+.text-justify { text-align: justify; }
+#navbar-main.affix { box-shadow: 0 1px 15px #333; }
+.gm-style h3 {color:#777;margin:0}
+.popover {font-weight:lighter}
+.popover-static {display: block;position:relative;margin:auto;z-index:0}
+.popover-static.left {margin:0 10px 0 0}
+.popover img {max-width:100%}
+    </style>
+
+    <!-- If you'd like to support IE8 -->
+    <!--[if IE 8]>
+        <script src="http://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
+    <![endif]-->
+    <!--[if lt IE 9]>
+        <script src="js/vendor/html5-3.6-respond-1.4.2.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <!--[if lt IE 8]>
+    <p class="browserupgrade">Vous utilisez un navigateur <strong>dépassé</strong>. Vueillez <a href="http://browsehappy.com/">mettre à jour ou changer de navigateur</a> pour améliorer votre expérience.</p>
+    <![endif]-->
+
+    {{ content }}
+
+    {% include footer.html %}
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="js/parallax.min.js"></script>
+    <script src="//vjs.zencdn.net/5.8.8/video.js"></script>
+    <!--script src="js/main.js"></script-->
+    <script type="text/javascript">
+;$(function() {
+    var goToHash = function( target ) {
+        target = $(target);
+        if (target.length) {
+            $('html,body').animate({
+                scrollTop: target.offset().top - 51
+            }, 1000);
+        }
+    };
+
+    $('.parallax-container').css('background','none');
+
+    $('a[href*=#]:not([href=#])').on("click", function() {
+        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+            goToHash( this.hash );
+            return false;
+        }
+    });
+    if ( self.document.location.hash ) {
+        goToHash( self.document.location.hash );
+    }
+
+    $(".antispamEmail").on("click", function() {
+        var $t = $(this);
+
+        var params = "",
+            param = $t.data("cc");
+        if (param) {
+            params += "&cc=" + param.replace("%28%40%29", "%40");
+        }
+        param = $t.data("bcc");
+        if (param) {
+            params += "&bcc=" + param.replace("%28%40%29", "%40");
+        }
+        param = $t.data("subject");
+        if (param) {
+            params += "&subject=" + param;
+        }
+        param = $t.data("body");
+        if (param) {
+            params += "&body=" + param;
+        }
+
+        window.location.href =
+            "mailto:" + $t.data("to").replace("~at~", "%40")
+            + (params == "" ? "" : "?" + params.substring(1));
+        return false;
+    });
+});
+    </script>
+</body>
+</html>
