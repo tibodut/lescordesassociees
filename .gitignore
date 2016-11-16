@@ -8,8 +8,7 @@ Gemfile.lock
 
 android-chrome*
 apple-touch-icon*
-favicon*
+^favicon*
 img/le-marentin.*
-img/les_cordes_associees_cie*
 mstile*
 img/le-marentin-annonceur.jpeg
