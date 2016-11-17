@@ -5,10 +5,4 @@ _site
 Gemfile
 Gemfile.lock
 .DS_Store
-
-android-chrome*
-apple-touch-icon*
-^favicon*
-img/le-marentin.*
-mstile*
-img/le-marentin-annonceur.jpeg
+*.bak
