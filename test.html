@@ -1,19 +1,130 @@
 ---
-layout: min
+layout: default
 ---
 
-<h1>TEST</h1>
-<h2>dropdown</h2>
-<ul>
-    <li class="dropdown">
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Les spectacles <span class="caret"></span></a>
-        <ul class="dropdown-menu">
-            <li><a href="#laccordheure">L'accord'heure</a></li>
-            <li><a href="#echassetoidela">Echasse toi de là</a></li>
-        </ul>
-    </li>
-</ul>
+<div class="parallax-container parallax-full-height" data-parallax="scroll" data-position="-150px bottom" data-bleed="0" data-image-src="img/home.jpg" data-natural-width="2048" data-natural-height="1024" style="background-image: url(img/home.jpg); background-position: center bottom;">
+    {% include menu.html %}
 
+    <div class="container text-right">
+        <h1><span class="bg-primary">Les Cordes Associées</span></h1>
+        <p><span class="bg-default">Compagnie de spectacle vivant</span></p>
+    </div>
+</div>
 
-<script src="js/jquery-1.11.2.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
+<div id="la-compagnie" class="bg-primary">
+    <div class="container text-justify padding-top padding-bottom">
+        <div class="row">
+            <div class="col-md-4">
+                <h2>Les Cordes Associées</h2>
+                <p>La compagnie est née en 2011 à l’initiative de Gaidig Bleinhant et Clément Hascoet.<br />
+                Leur première rencontre se fait à la MPT de L'Harteloire à Brest autour d'un projet de séjour itinérant, spectacle proposé par Clément Hascoët avec les jeunes de l'atelier théâtre encadré par Gaidig Bleinhant.</p>
+            </div>
+            <div class="col-md-4">
+                <p>Dès ses débuts, la compagnie privilégie le spectacle de rue et le jeune public. Elle s’inscrit ainsi dans une démarche éducative et pédagogique en favorisant la rencontre avec le public et en revendiquant l’accessibilité du théâtre au plus grand nombre. Elle revendique ainsi sa conception d’un théâtre populaire et engagé.<br />
+                A travers les arts du cirque, le théâtre et la musique, elle aborde l’Homme dans ses différences, ses difficultés à communiquer et ses liens avec autrui.</p>
+            </div>
+            <div class="col-md-4">
+                <p>Après avoir créé une déambulation en échasses intitulée « <a href="#echassetoidela">Echasse-toi de là</a> », la compagnie a collaboré avec le Théâtre d’Ici et là et la compagnie Madame, Messieurs, dans la pièce « Un chant de Noel », adaptée de l’œuvre de Charles Dickens. Sa dernière création « <a href="#laccordheure">L’Accord’heure</a> » inspirée de l’univers absurde est sortie en juin 2015.<br />
+                Dans le même temps, la compagnie envisage la création d’un lieu de création à Loc-Eguiner Ploudiry (Finistère). Depuis 2015, la compagnie organise le festival « <a href="/le-marentin.html" title="Festival jeune public Le Marentin">Le Marentin</a> », un festival jeune public d'Arts de la rue.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container text-justify padding-bottom">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="row">
+                <div class="col-xs-6 col-md-12">
+                    <h2>Les spectacles</h2>
+                    <ul>
+                        <li><a href="#laccordheure">L'accord'heure</a></li>
+                        <li><a href="#echassetoidela">Echasse toi de là</a></li>
+                    </ul>
+                </div>
+                <div class="col-xs-6 col-md-12">
+                    <h2>Le festival</h2>
+                    <ul>
+                        <li><a href="http://www.lemarentin.fr/">Le Marentin</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div id="lieuderesidence" class="col-md-8">
+            <h2>Le lieu de résidence</h2>
+            <p>Un espace de création dédié au spectacle vivant.<br />
+                Face au manque de lieux de résidence adaptés et équipés pour les compagnies de spectacle vivant dans le Finistère, la compagnie Les Cordes Associées a décidé de créer un lieu capable d’accueillir ses propres expérimentations artistiques mais aussi celles d’autres compagnies professionnelles ou en cours de professionnalisation de la région et d’ailleurs.<br />
+                Véritable « laboratoire » artistique en milieu rural, cet espace, principalement orienté vers la création, se veut un soutien à l’émergence artistique en relation avec les publics locaux.</p>
+        </div>
+    </div>
+</div>
+
+<div class="parallax-container parallax-full-height" data-parallax="scroll" data-position="center 0px" data-bleed="0" data-image-src="img/DSC_2971.jpg" data-natural-width="4288" data-natural-height="2848" style="background-image: url({{site.baseurl}}/img/DSC_2971.jpg);">
+    <div class="container">
+
+    </div>
+</div>
+
+<div id="laccordheure" class="container">
+    <div class="row padding-bottom">
+        <div class="col-md-8 col-sm-6">
+            <h2>L'accord'heure</h2>
+            <blockquote>
+                <p>C'est l'histoire d'un voyage.<br>
+                    C'est l'histoire d'un chez soi.<br>
+                    C'est l'histoire d'un voyage en restant bien chez soi.<br>
+                    C'est aussi l'histoire d'une paire de chaussures et d'un refrain entêtant...</p>
+                <footer><cite>Gabrielle Pichon</cite></footer>
+            </blockquote>
+            <div class="row">
+                <!--div class="col-md-6">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <p><span class="glyphicon glyphicon-calendar"></span> L'agenda</p>
+                        </div>
+                        <ul class="list-group">
+                            <li class="list-group-item">19 décembre 2015 au <strong>Marentin</strong></li>
+                            <li class="list-group-item">21 mai 2016 à <strong>Plouguerneau</strong></li>
+                            <li class="list-group-item">5 juin 2016 à <strong>Tréméven</strong></li>
+                            <li class="list-group-item"><strong>Aurillac 2016</strong></li>
+                        </ul>
+                    </div>
+                </div-->
+                <div class="col-md-12">
+                    <p class="text-center"><a class="btn btn-primary btn-lg" href="" data-toggle="modal" data-target="#laccordheure-trailer"><span class="glyphicon glyphicon-play" aria-hidden="true"></span> Vidéo de présentation</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-6">
+            <img src="img/laccordeur-affiche.1024.jpg" class="img-responsive" />
+        </div>
+    </div>
+</div>
+<div id="laccordheure-trailer" class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document" style="width:640px">
+        <div class="modal-content">
+            <video id="teaser-laccordheure" controls preload="auto" width="640px" height="360px">
+                <source src="{{site.baseurl}}/videos/laccordheure/teaser-laccordheure-lescordesassociees.mp4" type="video/mp4; codecs=avc1.42E01E,mp4a.40.2">
+                <source src="{{site.baseurl}}/videos/laccordheure/teaser-laccordheure-lescordesassociees.webm" type="video/webm; codecs=vp8,vorbis">
+                <p class="alert alert-warning text-center vjs-no-js">Votre navigateur ne supporte pas les <a href="http://videojs.com/html5-video-support/" target="_blank">vidéos HTML5 ou les lecteurs Flash</a>...</p>
+            </video>
+        </div>
+    </div>
+</div>
+
+<div id="echassetoidela" class="parallax-container parallax-full-height" data-parallax="scroll" data-position="150px bottom" data-bleed="0" data-image-src="img/echasse-toi-de-la.jpg" data-natural-width="1623" data-natural-height="1080" style="background-image: url(img/echasse-toi-de-la.jpg);">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <h2><span class="bg-primary">Echasse toi de là</span></h2>
+                <p><span class="bg-default">Ni tout à fait de ce monde<br>
+Ni tout à fait d’ailleurs<br>
+LE marquis et LA marquise Accompagnés de leur Fidèle destrichoz S’invitent dans les rues de votre ville…<br>
+Fantasques et hauts sur leurs jambes comme en couleurs, Ils épatent, intriguent et détonnent&nbsp;!<br>
+Ces trois comparses d’un autre temps, ne manqueront ni d’imagination, ni d’audace, pour vous faire passer le plus délicieux des moments<br>
+Prends garde étranger : Leurs armes sont RE-DOU-TA-BLES <br>
+Alors « Echasses toi de là »…!</span></p>
+            </div>
+        </div>
+    </div>
+</div>
