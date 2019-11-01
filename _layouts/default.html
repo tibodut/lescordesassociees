@@ -119,5 +119,25 @@ a:focus, a:hover {
     });
 });
     </script>
+    
+    <div class="modal fade" id="modal-img" tabindex="-1" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="navbar-fixed-top">
+                    <button type="button" class="close navbar-right" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                </div>
+                <img src="404.jpg" alt="missing image" class="img-responsive">
+            </div>
+        </div>
+    </div>
+
+    <script>
+$('#modal-img').on('show.bs.modal', function (event) {
+  var link = $(event.relatedTarget) // Button that triggered the modal
+  var recipient = link.attr('href')
+  var modal = $(this)
+  modal.find('img').attr('src',recipient)
+})
+    </script>
 </body>
 </html>
