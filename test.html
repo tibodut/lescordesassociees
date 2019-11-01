@@ -134,22 +134,43 @@ Alors « Echasses toi de là »…!</span></p>
     <div class="row">
         <div class="col-xs-6 col-md-4">
             <div class="thumbnail">
-                <img src="img/caravane-des-tous-petits.1024.jpg">
+                <a href="img/caravane-des-tous-petits.1024.jpg" data-toggle="modal" data-target="#modal-img"><img src="img/caravane-des-tous-petits.1024.jpg"></a>
                 <div class="caption">
                     <h3>La caravane des touts petits <span class="label label-primary">Nurserie</span></h3>
                     <p>Un espace au calme pour changer les bébés lors de festivals ou lors de vos fêtes privées.</p>
-                    <p><a href="https://www.festivalduboutdumonde.com/" target="_blank">Festival du Bout du Monde</a>, Les Jeudis du Port <a href="https://www.brest.fr/bouger-se-divertir/culture/fetes-et-festivals-2147.html" target="_blank">de Brest</a>, ...</p>
+                    <p><a href="https://www.festivalduboutdumonde.com/" target="_blank">Festival du Bout du Monde</a>, Les Jeudis du Port <small>de <a href="https://www.brest.fr/bouger-se-divertir/culture/fetes-et-festivals-2147.html" target="_blank">la ville de Brest</a></small>, ...</p>
                 </div>
             </div>
         </div>
         <div class="col-xs-6 col-md-4">
             <div class="thumbnail">
-                <a href="img/toilettes-seches-PMR.960.jpg" data-toggle="modal" data-target="#picture-modal"><img src="img/toilettes-seches-PMR.960.jpg"></a>
+                <a href="img/toilettes-seches-PMR.960.jpg" data-toggle="modal" data-target="#modal-img"><img src="img/toilettes-seches-PMR.960.jpg"></a>
                 <div class="caption">
-                    <h3>La caravane toilettes sèches PMR</h3>
+                    <h3>La caravane toilettes sèches +PMR</h3>
                     <p>Accessible aux personnes à mobilité réduite, ces toilettes sèches disposent d'un point d’eau.</p>
                 </div>
             </div>
         </div>
     </div>
+    <p>Si ces créations vous intéresses, n'hésitez pas à <a href="mailto:" class="antispamEmail" data-to="lescordesassociees~at~gmail.com" data-subject="[Message du site web] Créations sur mersure">nous contacter</a>.</p>
 </div>
+
+<div class="modal fade" id="modal-img" tabindex="-1" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="navbar-fixed-top">
+                <button type="button" class="close navbar-right" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+            </div>
+            <img src="404.jpg" alt="missing image" class="img-responsive">
+        </div>
+    </div>
+</div>
+
+<script>
+$('#modal-img').on('show.bs.modal', function (event) {
+  var link = $(event.relatedTarget) // Button that triggered the modal
+  var recipient = link.attr('href')
+  var modal = $(this)
+  modal.find('img').attr('src',recipient)
+})
+</script>
